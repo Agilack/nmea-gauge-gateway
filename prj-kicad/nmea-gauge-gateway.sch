@@ -1,0 +1,94 @@
+EESchema Schematic File Version 2
+LIBS:nmea-gauge-gateway
+LIBS:nmea-gauge-gateway-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "NMEA2000 Gauge Gateway"
+Date "2020-04-04"
+Rev "0.1"
+Comp "Agilack"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_8 P2
+U 1 1 5E8895F0
+P 10050 3350
+F 0 "P2" H 10050 2700 60  0000 C CNN
+F 1 "CONN_8" V 10050 3350 60  0000 C CNN
+F 2 "nmea-gauge-gateway:CONN_638263122008" H 10050 3350 60  0001 C CNN
+F 3 "" H 10050 3350 60  0000 C CNN
+	1    10050 3350
+	1    0    0    1   
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 5E8895F5
+P 9600 3900
+F 0 "#PWR01" H 9600 3900 30  0001 C CNN
+F 1 "GND" H 9600 3830 30  0001 C CNN
+F 2 "" H 9600 3900 60  0000 C CNN
+F 3 "" H 9600 3900 60  0000 C CNN
+	1    9600 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 3900 9600 3800
+Wire Wire Line
+	9600 3800 9700 3800
+Wire Wire Line
+	9600 2800 9600 2900
+Wire Wire Line
+	9600 2900 9700 2900
+$Comp
+L +VIn #PWR02
+U 1 1 5E889619
+P 9600 2800
+F 0 "#PWR02" H 9600 2760 30  0001 C CNN
+F 1 "+VIn" H 9600 2910 30  0000 C CNN
+F 2 "" H 9600 2800 60  0000 C CNN
+F 3 "" H 9600 2800 60  0000 C CNN
+	1    9600 2800
+	1    0    0    -1  
+$EndComp
+Text GLabel 9600 3650 0    45   Output ~ 0
+GAUGE1_IN
+Wire Wire Line
+	9600 3650 9700 3650
+Text GLabel 9600 3550 0    45   Input ~ 0
+GAUGE1_OUT
+Text GLabel 9600 3450 0    45   Input ~ 0
+GAUGE1_REF
+Wire Wire Line
+	9600 3550 9700 3550
+Wire Wire Line
+	9700 3450 9600 3450
+Wire Wire Line
+	9600 3250 9700 3250
+Wire Wire Line
+	9600 3150 9700 3150
+Wire Wire Line
+	9600 3050 9700 3050
+Text GLabel 9600 3250 0    45   Output ~ 0
+GAUGE2_IN
+Text GLabel 9600 3150 0    45   Input ~ 0
+GAUGE2_OUT
+Text GLabel 9600 3050 0    45   Input ~ 0
+GAUGE2_REF
+$Comp
+L CONN_M12-5 P1
+U 1 1 5E88965B
+P 1400 3350
+F 0 "P1" H 1400 3700 60  0000 C CNN
+F 1 "CONN_M12-5" H 1400 3000 45  0000 C CNN
+F 2 "" H 1400 3350 60  0000 C CNN
+F 3 "" H 1400 3350 60  0000 C CNN
+	1    1400 3350
+	-1   0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name nmea-gauge-gateway)(type KiCad)(uri "$(KIPRJMOD)/nmea-gauge-gateway.pretty")(options "")(descr ""))
+)
