@@ -5,7 +5,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title "NMEA2000 Gauge Gateway"
 Date "2020-04-04"
 Rev "0.1"
@@ -86,9 +86,63 @@ U 1 1 5E88965B
 P 1400 3350
 F 0 "P1" H 1400 3700 60  0000 C CNN
 F 1 "CONN_M12-5" H 1400 3000 45  0000 C CNN
-F 2 "" H 1400 3350 60  0000 C CNN
+F 2 "" H 1400 3350 60  0001 C CNN
 F 3 "" H 1400 3350 60  0000 C CNN
 	1    1400 3350
 	-1   0    0    -1  
 $EndComp
+$Comp
+L R R20
+U 1 1 5E9B72F1
+P 8600 5100
+F 0 "R20" V 8700 5100 50  0000 C CNN
+F 1 "10k" V 8600 5100 45  0000 C CNN
+F 2 "nmea-gauge-gateway:SMD0805" H 8600 5100 60  0001 C CNN
+F 3 "" H 8600 5100 60  0000 C CNN
+	1    8600 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R10
+U 1 1 5E9B7320
+P 8600 5500
+F 0 "R10" V 8700 5500 50  0000 C CNN
+F 1 "10k" V 8600 5500 45  0000 C CNN
+F 2 "nmea-gauge-gateway:SMD0805" H 8600 5500 60  0001 C CNN
+F 3 "" H 8600 5500 60  0000 C CNN
+	1    8600 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +VIn #PWR03
+U 1 1 5E9B73E0
+P 8150 4900
+F 0 "#PWR03" H 8150 4860 30  0001 C CNN
+F 1 "+VIn" H 8150 5010 30  0000 C CNN
+F 2 "" H 8150 4900 60  0000 C CNN
+F 3 "" H 8150 4900 60  0000 C CNN
+	1    8150 4900
+	1    0    0    -1  
+$EndComp
+Text GLabel 8950 5500 2    60   Output ~ 0
+GAUGE1_REF
+Wire Wire Line
+	8950 5500 8850 5500
+Wire Wire Line
+	8950 5100 8850 5100
+Text GLabel 8950 5100 2    60   Output ~ 0
+GAUGE2_REF
+Wire Wire Line
+	8150 4900 8150 5500
+Wire Wire Line
+	8150 5500 8350 5500
+Wire Wire Line
+	8350 5100 8150 5100
+Connection ~ 8150 5100
+$Sheet
+S 6750 2600 2000 1500
+U 5E920088
+F0 "Sensor Interface" 60
+F1 "sensor.sch" 60
+$EndSheet
 $EndSCHEMATC
