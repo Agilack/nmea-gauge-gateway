@@ -5,7 +5,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title "NMEA2000 Gauge Gateway"
 Date "2020-04-04"
 Rev "0.1"
@@ -29,56 +29,39 @@ $EndComp
 $Comp
 L GND #PWR01
 U 1 1 5E8895F5
-P 9600 3900
-F 0 "#PWR01" H 9600 3900 30  0001 C CNN
-F 1 "GND" H 9600 3830 30  0001 C CNN
-F 2 "" H 9600 3900 60  0000 C CNN
-F 3 "" H 9600 3900 60  0000 C CNN
-	1    9600 3900
+P 9600 3050
+F 0 "#PWR01" H 9600 3050 30  0001 C CNN
+F 1 "GND" H 9600 2980 30  0001 C CNN
+F 2 "" H 9600 3050 60  0000 C CNN
+F 3 "" H 9600 3050 60  0000 C CNN
+	1    9600 3050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9600 3900 9600 3800
-Wire Wire Line
-	9600 3800 9700 3800
-Wire Wire Line
-	9600 2800 9600 2900
 Wire Wire Line
 	9600 2900 9700 2900
-$Comp
-L +VIn #PWR02
-U 1 1 5E889619
-P 9600 2800
-F 0 "#PWR02" H 9600 2760 30  0001 C CNN
-F 1 "+VIn" H 9600 2910 30  0000 C CNN
-F 2 "" H 9600 2800 60  0000 C CNN
-F 3 "" H 9600 2800 60  0000 C CNN
-	1    9600 2800
-	1    0    0    -1  
-$EndComp
-Text GLabel 9600 3650 0    45   Output ~ 0
+Text GLabel 9600 3800 0    45   Output ~ 0
 GAUGE1_IN
 Wire Wire Line
-	9600 3650 9700 3650
-Text GLabel 9600 3550 0    45   Input ~ 0
+	9600 3800 9700 3800
+Text GLabel 9600 3700 0    45   Input ~ 0
 GAUGE1_OUT
-Text GLabel 9600 3450 0    45   Input ~ 0
+Text GLabel 9600 3600 0    45   Input ~ 0
 GAUGE1_REF
 Wire Wire Line
-	9600 3550 9700 3550
+	9600 3700 9700 3700
 Wire Wire Line
-	9700 3450 9600 3450
+	9700 3600 9600 3600
 Wire Wire Line
-	9600 3250 9700 3250
+	9600 3400 9700 3400
 Wire Wire Line
-	9600 3150 9700 3150
+	9600 3300 9700 3300
 Wire Wire Line
-	9600 3050 9700 3050
-Text GLabel 9600 3250 0    45   Output ~ 0
+	9600 3200 9700 3200
+Text GLabel 9600 3400 0    45   Output ~ 0
 GAUGE2_IN
-Text GLabel 9600 3150 0    45   Input ~ 0
+Text GLabel 9600 3300 0    45   Input ~ 0
 GAUGE2_OUT
-Text GLabel 9600 3050 0    45   Input ~ 0
+Text GLabel 9600 3200 0    45   Input ~ 0
 GAUGE2_REF
 $Comp
 L CONN_M12-5 P1
@@ -113,17 +96,6 @@ F 3 "" H 8600 5500 60  0000 C CNN
 	1    8600 5500
 	0    -1   -1   0   
 $EndComp
-$Comp
-L +VIn #PWR03
-U 1 1 5E9B73E0
-P 8150 4900
-F 0 "#PWR03" H 8150 4860 30  0001 C CNN
-F 1 "+VIn" H 8150 5010 30  0000 C CNN
-F 2 "" H 8150 4900 60  0000 C CNN
-F 3 "" H 8150 4900 60  0000 C CNN
-	1    8150 4900
-	1    0    0    -1  
-$EndComp
 Text GLabel 8950 5500 2    60   Output ~ 0
 GAUGE1_REF
 Wire Wire Line
@@ -145,4 +117,38 @@ U 5E920088
 F0 "Sensor Interface" 60
 F1 "sensor.sch" 60
 $EndSheet
+$Sheet
+S 750  5550 2500 1500
+U 5E9581C6
+F0 "Power Supply" 60
+F1 "power.sch" 60
+$EndSheet
+Wire Wire Line
+	9600 3050 9600 3000
+Wire Wire Line
+	9600 3000 9700 3000
+Wire Wire Line
+	9600 2800 9600 2900
+$Comp
+L +VIn #PWR02
+U 1 1 5E889619
+P 9600 2800
+F 0 "#PWR02" H 9600 2760 30  0001 C CNN
+F 1 "+VIn" H 9600 2910 30  0000 C CNN
+F 2 "" H 9600 2800 60  0000 C CNN
+F 3 "" H 9600 2800 60  0000 C CNN
+	1    9600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L +VInP #PWR03
+U 1 1 5E95CB4C
+P 8150 4900
+F 0 "#PWR03" H 8150 4860 30  0001 C CNN
+F 1 "+VInP" H 8150 5010 30  0000 C CNN
+F 2 "" H 8150 4900 60  0000 C CNN
+F 3 "" H 8150 4900 60  0000 C CNN
+	1    8150 4900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -1,5 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP D_Schottky
+D Diode schottky
+$ENDCMP
+#
 $CMP MCP6001
 D Op Amp in 5-pin package
 K op amp amplifier operational 
